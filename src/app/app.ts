@@ -8,5 +8,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('counter-app');
+count=0;
+
+handleIncrement(){
+  this.count=this.count+1;
+}
+handleDecrement(){
+  this.count=this.count-1;
+}
+reset(){
+  this.count=0;
+}
 }
